@@ -8,7 +8,7 @@ Nextjs14 Website for mental health and doctor booking
 <<<<<<< HEAD -->
 # minimannveda
 
-This project is awesome! 🚀  
+This project is awesome! 🚀 i 
 Now with local + remote content combined!
 
 # mentcare

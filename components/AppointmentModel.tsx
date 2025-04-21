@@ -16,6 +16,7 @@ const AppointmentModel = ({
   userId,
   appointment,
   type,
+  
 }: {
   patientId: string;
   userId: string;
