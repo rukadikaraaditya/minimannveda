@@ -37,12 +37,11 @@ export const columns: ColumnDef<Appointment>[] = [
   },
   {
     accessorKey: "patient",
-    header:"Patient",
-  //   cell:({row})=> {
-  //       return <p className="text-14-medium">{row.original.patient.name}</p>
-  //   }
-  // },
-   cell: ({ row }) => {
+    header: "Patient",
+    // cell: ({ row }) => {
+    //   return <p className="text-14-medium">{row.original.patient.name}</p>;
+    // },
+    cell: ({ row }) => {
       const patient = row.original.patient;
       return (
         <p className="text-14-medium">
