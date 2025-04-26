@@ -38,10 +38,18 @@ export const columns: ColumnDef<Appointment>[] = [
   {
     accessorKey: "patient",
     header:"Patient",
-    cell:({row})=> {
-        return <p className="text-14-medium">{row.original.patient.name}</p>
-    }
-  },
+  //   cell:({row})=> {
+  //       return <p className="text-14-medium">{row.original.patient.name}</p>
+  //   }
+  // },
+   cell: ({ row }) => {
+      const patient = row.original.patient;
+      return (
+        <p className="text-14-medium">
+          {patient ? patient.name : "Unknown Patient"}
+        </p>
+      );
+    },
   {
     accessorKey: "status",
     header: "Status",
@@ -96,7 +104,7 @@ export const columns: ColumnDef<Appointment>[] = [
         <div className="flex gap-1">
         <AppointmentModel
             type="schedule"
-            patientId={data.patient.$id}
+            patientId={data.patient?.$id || ""}
             userId={data.userId}
             appointment={data}
             title="Schedule Appointment"
@@ -104,7 +112,7 @@ export const columns: ColumnDef<Appointment>[] = [
         />
         <AppointmentModel
             type="cancel"
-            patientId={data.patient.$id}
+            patientId={data.patient?.$id || ""}
             userId={data.userId}
             appointment={data}
             title="Cancel Appointment"
