@@ -49,6 +49,7 @@ export const columns: ColumnDef<Appointment>[] = [
         </p>
       );
     },
+  },
   {
     accessorKey: "status",
     header: "Status",
